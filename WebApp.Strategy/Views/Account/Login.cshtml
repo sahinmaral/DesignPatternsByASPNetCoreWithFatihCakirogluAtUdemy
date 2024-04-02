@@ -1,0 +1,18 @@
+@{
+    ViewBag.Title = "Login";
+    Layout = "_Layout";
+}
+
+<h1>Login</h1>
+
+<form asp-action="Login" asp-controller="Account">
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="user1@outlook.com">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" value="Abc1234." name="password">
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Submit</button>
+</form>

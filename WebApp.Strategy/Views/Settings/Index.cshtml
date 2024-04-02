@@ -1,0 +1,15 @@
+@model Settings
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "_Layout";
+}
+
+<form asp-controller="Settings" asp-action="ChangeDatabase">
+    <div class="mb-3">
+        <label asp-for="DatabaseType">Selected Database Type</label>
+        <select class="form-select" asp-for="DatabaseType" asp-items="Html.GetEnumSelectList<EDatabaseType>()"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
