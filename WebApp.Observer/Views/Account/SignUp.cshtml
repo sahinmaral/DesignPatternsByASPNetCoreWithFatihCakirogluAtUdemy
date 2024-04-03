@@ -1,0 +1,30 @@
+@model UserCreateViewModel
+
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "_Layout";
+}
+
+<h1>SignUp</h1>
+@if (ViewBag.Message is not null)
+{
+    <div class="alert alert-primary" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+<form asp-action="SignUp" asp-controller="Account">
+    <div class="mb-3">
+        <label asp-for="UserName" class="form-label">Username</label>
+        <input type="text" class="form-control" asp-for="UserName">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email address</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label">Password</label>
+        <input type="password" class="form-control" asp-for="Password">
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Submit</button>
+</form>
