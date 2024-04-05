@@ -1,0 +1,12 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Add Watermark</h2>
+
+<form asp-controller="Home" asp-action="AddWatermark" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
